@@ -1,22 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="cozy">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Funny Screen Washer</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funny Screen Cleaner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
-    <script defer src="script.js"></script>
-    </head>
+  <div class="background-image-hint" aria-hidden="true"></div>
+  <div class="floating-dust" aria-hidden="true"></div>
 
-    <body>
-        
-    </body>
+  <header class="topbar">
+    <div class="brand">
+<img
+      class="brand-logo"
+      src="images/idle.png"
+      alt="Funny Screen Cleaner logo"
+    />
+      <div>
+        <p class="eyebrow">mini funny cleaner home</p>
+        <h1>Little Cleaner</h1>
+      </div>
+    </div>
 
+    <div class="controls" aria-label="App controls">
+      <button class="control-btn primary" id="cleanAllBtn">Clean All</button>
+      <button class="control-btn" id="addDirtBtn">Add More Dirt</button>
 
+      <button class="control-btn" id="themeBtn">Change Theme</button>
+      <button class="control-btn" id="funnyBtn" aria-pressed="true">Funny Mode: On</button>
+    </div>
+  </header>
+
+  <main id="main-content" class="app-shell">
+    <section class="hud-panel glass-panel">
+      <div>
+        <p class="panel-label">Current theme</p>
+        <p class="panel-value" id="themeLabel">Cozy</p>
+      </div>
+      <div>
+        <p class="panel-label">Dirty level</p>
+        <p class="panel-value"><span id="dirtLevel">72</span>%</p>
+      </div>
+      <div>
+        <p class="panel-label">Cleaner mood</p>
+        <p class="panel-value" id="moodLabel">Happy</p>
+      </div>
+    </section>
+
+    <section class="screen-stage" aria-label="Dirty screen play area">
+      <div class="screen-frame glass-panel">
+        <div class="screen-glow"></div>
+        <div class="screen-content">
+          
+
+          <div id="speechBubble" class="speech-bubble" aria-live="polite">Bro this screen is impossible 😭</div>
+
+          <div id="cleaner" class="cleaner" aria-label="Animated cleaner character">
+            <img id="cleanerSprite" src="images/idle.png"
+             alt="Cute cleaner character" />
+          </div>
+
+          <canvas id="dirtCanvas" aria-label="Dirty screen effects"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card glass-card">
+        <h3>How it looks</h3>
+        <p>The screen starts with fog, fingerprints, water drops, and dust</p>
+      </article>
+      <article class="info-card glass-card">
+        <h3>What is happening</h3>
+
+<p>All the dirty stuff is drawn on top of the clean screen like a layer.</p>
+      </article>
+
+      <article class="info-card glass-card">
+        <h3>How you clean it</h3>
+<p>When you move your mouse, small round areas get wiped like real cleaning.</p>
+      </article>
+    </section>
+  </main>
+</body>
 </html>
-
-    
